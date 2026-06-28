@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.payment-box{
+max-width:420px;
+margin:40px auto;
+background:#161b22;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,229,255,.25);
+}
+
+.payment-box img{
+width:200px;
+border-radius:12px;
+margin:20px 0;
+}
+
+.price{
+font-size:40px;
+font-weight:bold;
+color:#00ff88;
+margin:15px 0;
+}
+
+.upi{
+font-size:18px;
+margin-bottom:20px;
+color:#ddd;
+}
+
+.paybtn{
+
+display:block;
+background:#00e5ff;
+color:#000;
+padding:15px;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+margin-top:15px;
+
+}
+
+.whatsapp{
+
+display:block;
+margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="payment-box">
+
+<h1>Secure Payment </h1>
+
+<p class="price" id="price">₹49</p>
+
+<!-- QR IMAGE -->
+<img src="IMG-20260626-fampay.jpg" alt="QR Code">
+
+<p class="upi">
+UPI ID:<br>
+koli-proxysarver@fam
+</p>
+
+<p>
+Scan the QR using PhonePe / Paytm / G Pay
+</p>
+
+<a
+class="paybtn"
+<a href="https://api.whatsapp.com/send?phone=917856823046&text=Hi%20I%20have%20completed%20the%20payment">
+Verify Payment on WhatsApp ✅
+</a>
+
+<a href="index.html" class="btn">
+⬅ Back
+</a>
+
+</div>
+
+<script>
+
+const params=new URLSearchParams(window.location.search);
+
+const plan=params.get("plan");
+
+if(plan){
+
+document.getElementById("price").innerHTML="₹"+plan;
+
+}
+
+</script>
+
+</body>
+</html>
